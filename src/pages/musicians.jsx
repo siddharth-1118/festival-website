@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const musicians = [
   { id: 1, name: "Jean Dupont", img: "https://i.ebayimg.com/images/g/DqYAAMXQNo5TZPmu/s-l1600.jpg" },
-  { id: 2, name: "Marie Leclerc", img: "https://i.ebayimg.com/images/g/DqYAAMXQNo5TZPmu/s-l1600.jpg" },
+  { id: 2, name: "Marie Leclerc", img: "./images/musicians/marie_leclerc.jpg" },
   { id: 3, name: "Pierre Martin", img: "https://i.ebayimg.com/images/g/DqYAAMXQNo5TZPmu/s-l1600.jpg" }
 ];
 
