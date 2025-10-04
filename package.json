@@ -2,7 +2,7 @@
   "name": "festival-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "https://siddharth-1118.github.io/festival-website",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -14,6 +14,7 @@
     "react-router-dom": "^7.9.3",
     "web-vitals": "^2.1.4"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
