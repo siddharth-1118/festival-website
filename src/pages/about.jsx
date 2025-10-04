@@ -6,7 +6,7 @@ export default function About() {
         The French Festival of Music (Fête de la Musique) began in France as a
         celebration of live music. Streets, squares, and parks transform into
         stages, uniting people across cultures. Our 2025 edition takes place on
-        <b> 21 July</b>.
+        <b> 21 June</b>.
       </p>
     </div>
   );
