@@ -1,74 +1,63 @@
-import React, { useState } from "react";
+// src/pages/Tickets.jsx
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
 export default function Tickets() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    ticketType: "",
-    quantity: 1,
-    Payment: ""
-  });
+  const formRef = useRef();
+  const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // EmailJS credentials (use environment variables if possible)
+  const SERVICE_ID = "service_zzgy9ct";
+  const TEMPLATE_ADMIN = "template_w7c1xzl";
+  const TEMPLATE_USER = "template_1jzh78a";
+  const PUBLIC_KEY = "3Ypomrf7V7bVnsxSO";
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setStatus("sending");
 
-    emailjs.send(
-      "service_zzgy9ct",     // from EmailJS
-      "template_w7c1xzl",    // from EmailJS
-      formData,
-      "3Ypomrf7V7bVnsxSO"      // from EmailJS
-    )
-    .then(() => {
-      alert("🎉 Ticket details sent to your email!");
-      setFormData({ name: "", email: "", phone: "", ticketType: "", quantity: 1 });
-    })
-    .catch((error) => {
-      console.error("Email send error:", error);
-      alert("❌ Failed to send details.");
-    });
+    const templateParams = {
+      user_name: formRef.current.user_name.value,
+      user_email: formRef.current.user_email.value,
+      user_phone: formRef.current.user_phone.value,
+      ticket_type: formRef.current.ticket_type.value,
+      to_email: formRef.current.user_email.value, // for the user template
+    };
+
+    // Step 1: Send details to you (admin)
+    emailjs.send(SERVICE_ID, TEMPLATE_ADMIN, templateParams, PUBLIC_KEY)
+      .then(() => {
+        // Step 2: Send confirmation to user (auto-reply)
+        return emailjs.send(SERVICE_ID, TEMPLATE_USER, templateParams, PUBLIC_KEY);
+      })
+      .then(() => {
+        setStatus("success");
+        formRef.current.reset();
+      })
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+        setStatus("error");
+      });
   };
 
   return (
-    <div className="tickets-page">
-      <h2>Book Your Ticket</h2>
-      <form onSubmit={handleSubmit} className="form">
-        <input 
-          type="text" name="name" placeholder="Full Name" 
-          value={formData.name} onChange={handleChange} required 
-        />
-        <input 
-          type="email" name="email" placeholder="Email Address" 
-          value={formData.email} onChange={handleChange} required 
-        />
-        <input 
-          type="tel" name="phone" placeholder="Phone Number" 
-          value={formData.phone} onChange={handleChange} required 
-        />
-        <select 
-          name="ticketType" value={formData.ticketType} 
-          onChange={handleChange} required
-        >
+    <div style={{ textAlign: "center", padding: "50px", color: "white" }}>
+      <h2>🎟️ Book Your Tickets</h2>
+      <form ref={formRef} onSubmit={handleSubmit}>
+        <input type="text" name="user_name" placeholder="Full Name" required /><br /><br />
+        <input type="email" name="user_email" placeholder="Email" required /><br /><br />
+        <input type="tel" name="user_phone" placeholder="Phone" required /><br /><br />
+        <select name="ticket_type" required>
           <option value="">Select Ticket Type</option>
           <option value="Regular">Regular</option>
           <option value="VIP">VIP</option>
-        </select>
-        <input 
-          type="number" name="quantity" min="1" 
-          value={formData.quantity} onChange={handleChange} required 
-        />
-        <select name="PaymentMethod" id="">
-          <option value="">Select Payment Method</option>
-          <option value="Credit Card">Credit Card</option>
-          <option value="PayPal">PayPal</option>
-        </select>
-        <button type="submit" style={{ backgroundColor: "yellow", color: "black", padding: "10px 20px", border: "none", borderRadius: "5px", cursor: "pointer" }}>Submit</button>
+        </select><br /><br />
+        <button type="submit">Submit</button>
       </form>
+
+      {status === "sending" && <p>⏳ Sending...</p>}
+      {status === "success" && <p>✅ Your ticket request has been sent! Check your email for confirmation.</p>}
+      {status === "error" && <p>❌ Something went wrong. Please try again.</p>}
     </div>
   );
 }
