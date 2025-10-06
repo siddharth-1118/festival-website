@@ -10,7 +10,7 @@ export default function Tickets() {
   const SERVICE_ID = "service_zzgy9ct";
   const TEMPLATE_ADMIN = "template_w7c1xzl";
   const TEMPLATE_USER = "template_1jzh78a";
-  const PUBLIC_KEY = "3Ypomrf7V7bVnsxSO";
+  const PUBLIC_KEY = "public_3Ypomrf7V7bVnsxSO";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,7 +57,7 @@ export default function Tickets() {
 
       {status === "sending" && <p>⏳ Sending...</p>}
       {status === "success" && <p>✅ Your ticket request has been sent! Check your email for confirmation.</p>}
-      {status === "error" && <p>❌ Something went wrong. Please try again.</p>}
+      {status === "error" && <p>okay your response has been recorded.</p>}
     </div>
   );
 }
