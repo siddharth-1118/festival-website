@@ -22,20 +22,8 @@ export default function Home() {
 
         {/* ✅ Button that goes to Tickets.jsx */}
         <Link to="/tickets">
-          <button 
-            style={{
-              marginTop: "50px",
-              padding: "15px 30px",
-              fontSize: "18px",
-              border: "none",
-              borderRadius: "8px",
-              backgroundColor: "#ff4081",
-              color: "white",
-              cursor: "pointer"
-            }}
-          >
-            🎟️ Get Tickets
-          </button>
+          
+            
         </Link>
           <Link to="/musicians">
             <button style={{ margin: "10px", padding: "15px 30px", fontSize: "18px" }}>🎤 Musicians</button>
