@@ -39,6 +39,9 @@ export default function App() {
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/musicians" element={<Musicians />} />
           <Route path="/musicians/:id" element={<MusicianDetail />} />
+          <Route path="/cities" element={<Cities />} />
+          <Route path="/cities/:id" element={<CityDetails />} />
+          
         </Routes>
 
         {/* Footer */}
