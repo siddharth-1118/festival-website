@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: white;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s ease;
+  padding-bottom: 4px;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #ffcc00;
+}
+
+/* ✅ Highlight the active page */
+.nav-link.active {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+}

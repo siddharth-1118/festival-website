@@ -8,12 +8,14 @@ import Musicians from "./pages/musicians";
 import MusicianDetail from "./pages/musiciansdetails";
 import Cities from "./pages/cities";
 import CityDetails from "./pages/citiesdetails";
+import navbar from "./pages/navbar";
 
 import "./style.css";
 
 export default function App() {
   return (
     <Router>
+      <navbar />
       <div className="bg-gradient-to-br from-pink-500 via-purple-600 to-blue-500 min-h-screen text-white">
         {/* Navbar */}
         <nav className="flex justify-between items-center px-8 py-4 bg-black/40 backdrop-blur-md shadow-lg">
@@ -31,6 +33,7 @@ export default function App() {
         </nav>
 
         {/* Pages */}
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -41,7 +44,7 @@ export default function App() {
           <Route path="/musicians/:id" element={<MusicianDetail />} />
           <Route path="/cities" element={<Cities />} />
           <Route path="/cities/:id" element={<CityDetails />} />
-          
+
         </Routes>
 
         {/* Footer */}
