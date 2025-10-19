@@ -6,6 +6,8 @@ import Contact from "./pages/contact";
 import Tickets from "./pages/tickets";
 import Musicians from "./pages/musicians";
 import MusicianDetail from "./pages/musiciansdetails";
+import Cities from "./pages/cities";
+import CityDetails from "./pages/citiesdetails";
 
 import "./style.css";
 
@@ -22,6 +24,9 @@ export default function App() {
             <li><Link to="/lineup">Lineup</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/tickets">Tickets</Link></li>
+            <li><Link to="/musicians">Musicians</Link></li>
+            <li><Link to="/cities">Cities</Link></li>
+            <li><Link to="/cities/:id">City Details</Link></li>
           </ul>
         </nav>
 
