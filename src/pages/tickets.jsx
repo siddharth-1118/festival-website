@@ -47,10 +47,51 @@ export default function Tickets() {
         <input type="text" name="user_name" placeholder="Full Name" required /><br /><br />
         <input type="email" name="user_email" placeholder="Email" required /><br /><br />
         <input type="tel" name="user_phone" placeholder="Phone" required /><br /><br />
-        <select name="ticket_type" required>
+        <select name="ticket_type" className="big-placeholder" required>
           <option value="">Select Ticket Type</option>
           <option value="Regular">Regular</option>
           <option value="VIP">VIP</option>
+        </select><br /><br />
+        <input type="number" name="ticket_quantity" placeholder="Number of Tickets" required /><br /><br />
+        <input type="text" name="user_message" placeholder="Any special requests?" /><br /><br />
+        <select name="city" id="">
+          <option value="">Select City</option>
+          <option value="paris">Paris</option>
+          <option value="lyon">Lyon</option>
+          <option value="marseille">Marseille</option>
+          <option value="toulouse">Toulouse</option>
+          <option value="avignon">Avignon</option>
+          <option value="cannes">Cannes</option>
+          <option value="menton">Menton</option>
+          <option value="nice">Nice</option>
+          <option value="bordeaux">Bordeaux</option>
+          <option value="strasbourg">Strasbourg</option>
+          <option value="nantes">Nantes</option>
+          <option value="montpellier">Montpellier</option>
+          <option value="rennes">Rennes</option>
+          <option value="lille">Lille</option>
+          <option value="grenoble">Grenoble</option>
+          <option value="dijon">Dijon</option>
+          <option value="angers">Angers</option>
+          <option value="nimes">Nîmes</option>
+          <option value="saintetienne">Saint-Étienne</option>
+          <option value="tours">Tours</option>
+          <option value="clermontferrand">Clermont-Ferrand</option>
+          <option value="amiens">Amiens</option>
+          <option value="besancon">Besançon</option>
+          <option value="metz">Metz</option>
+          <option value="perpignan">Perpignan</option>
+          <option value="orleans">Orléans</option>
+          <option value="caen">Caen</option>
+          <option value="nancy">Nancy</option>
+          <option value="rouen">Rouen</option>
+          <option value="arles">Arles</option>
+        </select><br /><br />
+        <select name="payment_method" id="">
+          <option value="">Select Payment Method</option>
+          <option value="credit_card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="bank_transfer">Bank Transfer</option>
         </select><br /><br />
         <button type="submit">Submit</button>
       </form>

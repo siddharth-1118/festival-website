@@ -6,7 +6,8 @@ const cityFestivals = {
   paris: {
     name: "Paris Summer Music Fest",
     date: "July 21",
-    musicians: ["Jean Dupont", "Léa Rousseau", "DJ Lumière"],
+    musicians: ["Jean Dupont", "Léa Rousseau", "DJ Lumière",],
+    img: "https://i.ytimg.com/vi/jIbcr3UBBt8/maxresdefault.jpg"
   },
   lyon: {
     name: "Lyon Jazz Nights",
@@ -153,7 +154,7 @@ const cityFestivals = {
     date: "August 19",  
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
-  
+
 
 };
 

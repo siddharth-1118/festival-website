@@ -113,3 +113,31 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+.big-placeholder::placeholder {
+  font-size: 1.1rem;
+  color: gray;
+  opacity: 0.7;
+  padding: 20px;
+}
+input,textarea,select {
+  font-size: 1.1rem;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.submit-btn {
+  background: #ffcc00;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  padding: 3000px;
+}
+.submit-btn:hover {
+  background: #ffe066;
+  transform: scale(1.05);
+  padding: 3000px;
+} 

@@ -28,8 +28,8 @@ export default function Home() {
           <Link to="/musicians">
             <button style={{ margin: "10px", padding: "15px 30px", fontSize: "18px" }}>🎤 Musicians</button>
           </Link>
-          <Link to="/contact">
-            <button style={{ margin: "10px", padding: "15px 30px", fontSize: "18px" }}>📩 Contact Us</button>
+          <Link to="/cities">
+            <button style={{ margin: "10px", padding: "15px 30px", fontSize: "18px" }}>Cities</button>
           </Link>
           </div>
     </>
