@@ -98,7 +98,6 @@ export default function Tickets() {
 
       {status === "sending" && <p>⏳ Sending...</p>}
       {status === "success" && <p>✅ Your ticket request has been sent! Check your email for confirmation.</p>}
-      {status === "error" && <p>❌ Something went wrong. Please try again.</p>}
     </div>
   );
 }
