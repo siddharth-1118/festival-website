@@ -96,7 +96,7 @@ export default function Tickets() {
         <button type="submit">Submit</button>
       </form>
 
-      {status === "sending" && <p>⏳ Sending...</p>}
+      {status === "sending" && <p>⏳ successfully sent your request!</p>}
       {status === "success" && <p>✅ Your ticket request has been sent! Check your email for confirmation.</p>}
     </div>
   );
