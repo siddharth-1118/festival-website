@@ -28,7 +28,7 @@ export default function App() {
             <li><Link to="/tickets">Tickets</Link></li>
             <li><Link to="/musicians">Musicians</Link></li>
             <li><Link to="/cities">Cities</Link></li>
-            <li><Link to="/cities/:id">City Details</Link></li>
+            <li><Link to="/cities/:id"></Link></li>
           </ul>
         </nav>
 
