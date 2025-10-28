@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 const musicians = [
@@ -44,18 +45,21 @@ export default function Musicians() {
         {musicians.map((musician) => (
           <Link key={musician.id} to={`/musicians/${musician.id}`} style={{ textDecoration: "none" }}>
             <div>
-              <img 
-                src={musician.img} 
-                alt={musician.name} 
+              <img
+                src={musician.img}
+                alt={musician.name}
                 style={{
-                  width: "200px", 
-                  height: "200px", 
-                  borderRadius: "50%", 
-                  objectFit: "cover", 
-                  cursor: "pointer"
-                }} 
+                  width: "170px",
+                  height: "170px",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  marginBottom: "12px",
+                  border: "4px solid #FFD700"
+                }}
               />
-              <p style={{ color: "white", marginTop: "10px" }}>{musician.name}</p>
+              <p style={{ color: "white", fontWeight: "bold" }}>{musician.name}</p>
+              <p style={{ color: "white" }}>{musician.bio}</p>
+              <Link to={`/musicians/${musician.id}`} style={{ color: "#FFD700", textDecoration: "underline" }}>Voir plus</Link>
             </div>
           </Link>
         ))}
