@@ -6,7 +6,7 @@ import "./navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h2 className="logo">🎵 French Festival</h2>
+      <h2 className="logo">🎵 Festival français</h2>
 
       <div className="nav-links">
         <NavLink
@@ -14,28 +14,28 @@ export default function Navbar() {
           className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
           end
         >
-          Home
+          Accueil
         </NavLink>
 
         <NavLink
           to="/about"
           className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
         >
-          About
+          À propos
         </NavLink>
 
         <NavLink
           to="/cities"
           className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
         >
-          Cities
+          Villes
         </NavLink>
 
         <NavLink
           to="/tickets"
           className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
         >
-          Tickets
+          Billets
         </NavLink>
 
         <NavLink

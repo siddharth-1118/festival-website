@@ -4,158 +4,156 @@ import { useParams, Link } from "react-router-dom";
 
 const cityFestivals = {
   paris: {
-    name: "Paris Summer Music Fest",
-    date: "July 21",
-    musicians: ["Jean Dupont", "Léa Rousseau", "DJ Lumière",],
+    name: "Festival d'été de la musique à Paris",
+    date: "21 juillet",
+    musicians: ["Jean Dupont", "Léa Rousseau", "DJ Lumière"],
     img: "https://i.ytimg.com/vi/jIbcr3UBBt8/maxresdefault.jpg"
   },
   lyon: {
-    name: "Lyon Jazz Nights",
-    date: "July 22",
+    name: "Nuits de Jazz à Lyon",
+    date: "22 juillet",
     musicians: ["Camille Moreau", "The Sound Trio", "Noir Beats"],
   },
   marseille: {
-    name: "Marseille Ocean Beats",
-    date: "July 23",
+    name: "Rythmes Océaniques de Marseille",
+    date: "23 juillet",
     musicians: ["DJ Bleu", "Marie Fontaine", "Les Rythmes"],
   },
   toulouse: {
-    name: "Toulouse Harmony Fest",
-    date: "July 24",
+    name: "Fête de l'Harmonie à Toulouse",
+    date: "24 juillet",
     musicians: ["Luc Garnier", "Élodie", "Orchestre Rouge"],
   },
-    avignon: {
-    name: "Avignon Festival",
-    date: "July 25",
+  avignon: {
+    name: "Festival d'Avignon",
+    date: "25 juillet",
     musicians: ["Sophie Dubois", "Julien Lefevre", "Les Harmonies"],
   },
-    cannes: {
-    name: "Cannes Film Festival",
-    date: "July 26",
+  cannes: {
+    name: "Festival du film de Cannes",
+    date: "26 juillet",
     musicians: ["DJ Lumière", "Camille Moreau", "The Sound Trio"],
   },
   menton: {
-    name: "Menton Music Gala",
-    date: "July 27",
+    name: "Gala musical de Menton",
+    date: "27 juillet",
     musicians: ["DJ Bleu", "Marie Fontaine", "Les Rythmes"],
   },
-    nice: {
-    name: "Nice Jazz Festival",
-    date: "July 28",
+  nice: {
+    name: "Festival de Jazz de Nice",
+    date: "28 juillet",
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
-    bordeaux: {
-    name: "Bordeaux Music Festival",
-    date: "July 29",
+  bordeaux: {
+    name: "Festival de musique de Bordeaux",
+    date: "29 juillet",
     musicians: ["DJ Bleu", "Léa Rousseau", "The Sound Trio"],
   },
-    strasbourg: {
-    name: "Strasbourg Summer Beats",
-    date: "July 30",
+  strasbourg: {
+    name: "Rythmes d'été de Strasbourg",
+    date: "30 juillet",
     musicians: ["Camille Moreau", "Marie Fontaine", "Les Rythmes"],
   },
   nantes: {
-    name: "Nantes Music Fest",
-    date: "July 31",
+    name: "Fête musicale de Nantes",
+    date: "31 juillet",
     musicians: ["Jean Dupont", "Luc Garnier", "Orchestre Rouge"],
   },
-    montpellier: {
-    name: "Montpellier Music Festival",
-    date: "August 1",
+  montpellier: {
+    name: "Festival de musique de Montpellier",
+    date: "1 août",
     musicians: ["DJ Bleu", "Sophie Dubois", "The Sound Trio"],
   },
-    rennes: {
-    name: "Rennes Rhythm Fest",
-    date: "August 2",
+  rennes: {
+    name: "Fête des rythmes de Rennes",
+    date: "2 août",
     musicians: ["DJ Lumière", "Marie Fontaine", "Les Rythmes"],
   },
-    lille: {
-    name: "Lille Music Gala",
-    date: "August 3",
+  lille: {
+    name: "Gala musical de Lille",
+    date: "3 août",
     musicians: ["Camille Moreau", "Léa Rousseau", "Orchestre Rouge"],
   },
-    grenoble: {
-    name: "Grenoble Summer Sounds",
-    date: "August 4",
+  grenoble: {
+    name: "Sonorités d'été de Grenoble",
+    date: "4 août",
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
-    dijon: {
-    name: "Dijon Music Fest",
-    date: "August 5",
+  dijon: {
+    name: "Fête musicale de Dijon",
+    date: "5 août",
     musicians: ["DJ Bleu", "Marie Fontaine", "Les Rythmes"],
   },
-    angers: {
-    name: "Angers Harmony Festival",
-    date: "August 6",
+  angers: {
+    name: "Festival de l'harmonie à Angers",
+    date: "6 août",
     musicians: ["Jean Dupont", "Luc Garnier", "Orchestre Rouge"],
   },
   nimes: {
-    name: "Nîmes Music Nights",
-    date: "August 7",
+    name: "Nuits musicales de Nîmes",
+    date: "7 août",
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
   saintetienne: {
-    name: "Saint-Étienne Summer Fest",
-    date: "August 8",
+    name: "Fête d'été de Saint-Étienne",
+    date: "8 août",
     musicians: ["DJ Bleu", "Marie Fontaine", "Les Rythmes"],
   },
   tours: {
-    name: "Tours Music Gala",
-    date: "August 9",
+    name: "Gala musical de Tours",
+    date: "9 août",
     musicians: ["Camille Moreau", "Léa Rousseau", "Orchestre Rouge"],
   },
   clermontferrand: {
-    name: "Clermont-Ferrand Rhythm Fest",
-    date: "August 10",  
+    name: "Fête des rythmes de Clermont-Ferrand",
+    date: "10 août",
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
-    amiens: {
-    name: "Amiens Music Festival",
-    date: "August 11",
+  amiens: {
+    name: "Festival de musique d'Amiens",
+    date: "11 août",
     musicians: ["Jean Dupont", "Léa Rousseau", "Orchestre Rouge"],
   },
-    besancon: {
-    name: "Besançon Summer Beats",
-    date: "August 12",
+  besancon: {
+    name: "Rythmes d'été de Besançon",
+    date: "12 août",
     musicians: ["DJ Lumière", "Marie Fontaine", "Les Rythmes"],
   },
-    metz: {
-    name: "Metz Music Fest",
-    date: "August 13",
+  metz: {
+    name: "Fête musicale de Metz",
+    date: "13 août",
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
-    perpignan: {
-    name: "Perpignan Music Gala",
-    date: "August 14",
+  perpignan: {
+    name: "Gala musical de Perpignan",
+    date: "14 août",
     musicians: ["DJ Lumière", "Marie Fontaine", "Les Rythmes"],
   },
-    orleans: {
-    name: "Orléans Summer Sounds",
-    date: "August 15",  
+  orleans: {
+    name: "Sonorités d'été d'Orléans",
+    date: "15 août",
     musicians: ["DJ Lumière", "Marie Fontaine", "Les Rythmes"],
   },
-    caen: {
-    name: "Caen Music Festival",
-    date: "August 16",
+  caen: {
+    name: "Festival de musique de Caen",
+    date: "16 août",
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
-    nancy: {
-    name: "Nancy Rhythm Fest",
-    date: "August 17",  
+  nancy: {
+    name: "Fête des rythmes de Nancy",
+    date: "17 août",
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
-    rouen: {
-    name: "Rouen Music Gala",
-    date: "August 18",
+  rouen: {
+    name: "Gala musical de Rouen",
+    date: "18 août",
     musicians: ["DJ Lumière", "Marie Fontaine", "Les Rythmes"],
   },
-    arles: {
-    name: "Arles Summer Beats",
-    date: "August 19",  
+  arles: {
+    name: "Rythmes d'été d'Arles",
+    date: "19 août",
     musicians: ["DJ Lumière", "Sophie Dubois", "The Sound Trio"],
   },
-
-
 };
 
 export default function CityDetails() {
@@ -165,24 +163,24 @@ export default function CityDetails() {
   if (!city) {
     return (
       <div style={{ textAlign: "center", color: "white", padding: "50px" }}>
-        <h2>City not found</h2>
-        <Link to="/cities"><button>Back to Cities</button></Link>
+        <h2>Ville introuvable</h2>
+        <Link to="/cities"><button>Retour aux villes</button></Link>
       </div>
     );
   }
 
   return (
-    <div style={{ textAlign: "center", color: "white", padding: "50px" }}>
+    <div style={{ textAlign: "center", color: "black", padding: "50px", backgroundImage: `url(https://user-gen-media-assets.s3.amazonaws.com/seedream_images/d77b7eb3-b1e7-42cd-95ff-2cbd9db67950.png)`, backgroundSize: "cover", minHeight: "100vh" }}>
       <h2>🎵 {city.name}</h2>
-      <p>Date: {city.date}</p>
-      <h3>Performing Musicians:</h3>
+      <p>Date : {city.date}</p>
+      <h3>Musiciens à l'affiche :</h3>
       <ul style={{ listStyle: "none", padding: 0 }}>
         {city.musicians.map((m) => (
           <li key={m} style={{ margin: "10px 0" }}>{m}</li>
         ))}
       </ul>
       <Link to="/cities">
-        <button style={{ marginTop: "20px" }}>← Back to Cities</button>
+        <button style={{ marginTop: "20px" }}>← Retour aux villes</button>
       </Link>
     </div>
   );

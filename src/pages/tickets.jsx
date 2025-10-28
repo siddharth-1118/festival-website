@@ -42,20 +42,20 @@ export default function Tickets() {
 
   return (
     <div style={{ textAlign: "center", padding: "50px", color: "white" }}>
-      <h2>🎟️ Book Your Tickets</h2>
+      <h2>🎟️ Réservez vos billets</h2>
       <form ref={formRef} onSubmit={handleSubmit}>
-        <input type="text" name="user_name" placeholder="Full Name" required /><br /><br />
-        <input type="email" name="user_email" placeholder="Email" required /><br /><br />
-        <input type="tel" name="user_phone" placeholder="Phone" required /><br /><br />
+        <input type="text" name="user_name" placeholder="Nom complet" required /><br /><br />
+        <input type="email" name="user_email" placeholder="E-mail" required /><br /><br />
+        <input type="tel" name="user_phone" placeholder="Téléphone" required /><br /><br />
         <select name="ticket_type" className="big-placeholder" required>
-          <option value="">Select Ticket Type</option>
-          <option value="Regular">Regular</option>
+          <option value="">Sélectionnez le type de billet</option>
+          <option value="Regular">Régulier</option>
           <option value="VIP">VIP</option>
         </select><br /><br />
-        <input type="number" name="ticket_quantity" placeholder="Number of Tickets" required /><br /><br />
-        <input type="text" name="user_message" placeholder="Any special requests?" /><br /><br />
+        <input type="number" name="ticket_quantity" placeholder="Nombre de billets" required /><br /><br />
+        <input type="text" name="user_message" placeholder="Des demandes particulières ?" /><br /><br />
         <select name="city" id="">
-          <option value="">Select City</option>
+          <option value="">Sélectionnez une ville</option>
           <option value="paris">Paris</option>
           <option value="lyon">Lyon</option>
           <option value="marseille">Marseille</option>
@@ -88,16 +88,16 @@ export default function Tickets() {
           <option value="arles">Arles</option>
         </select><br /><br />
         <select name="payment_method" id="">
-          <option value="">Select Payment Method</option>
-          <option value="credit_card">Credit Card</option>
+          <option value="">Sélectionnez le mode de paiement</option>
+          <option value="credit_card">Carte bancaire</option>
           <option value="paypal">PayPal</option>
-          <option value="bank_transfer">Bank Transfer</option>
+          <option value="bank_transfer">Virement bancaire</option>
         </select><br /><br />
-        <button type="submit">Submit</button>
+        <button type="submit">Envoyer</button>
       </form>
 
-      {status === "sending" && <p>⏳ successfully sent your request!</p>}
-      {status === "success" && <p>✅ Your ticket request has been sent! Check your email for confirmation.</p>}
+      {status === "sending" && <p>Votre demande est en cours d'envoi...</p>}
+      {status === "success" && <p>✅ Votre demande de billet a été envoyée ! Vérifiez votre e-mail pour la confirmation.</p>}
     </div>
   );
 }

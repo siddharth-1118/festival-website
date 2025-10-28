@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const musicians = [
-  { id: 1, name: "Jean Dupont", img: "https://i.ebayimg.com/images/g/DqYAAMXQNo5TZPmu/s-l1600.jpg" },
+  { id: 1, name: "Jean Dupont", img: "https://www.rollingstone.com/wp-content/uploads/2021/02/DSF5585-1.jpg" },
   { id: 2, name: "Marie Leclerc", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbwOAs3YDJ2D-ezommE2yHTAGuKHmWSKUKXw&s" },
   { id: 3, name: "Pierre Martin", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDJwb5LLZET7w2hvhmsvyiiIUpWo4XytV9Dw&s" },
   { id: 4, name: "Sophie Dubois", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWSEnJk0NHtbsXNiJKCSrd8kEyWmtfmDAgFQ&s" },
@@ -16,7 +16,7 @@ const musicians = [
   { id: 13, name: "Laura Simon", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4SyHAbryZY0RuwtuHnrs0YX9_sk4NkFNZ4w&s" },
   { id: 14, name: "Thomas Lambert", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgeIDa83YimwT8R6eFk0prrzcM79M9GU7GDQ&s" },
   { id: 15, name: "Sarah Fontaine", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcu3G8bMR2RgfhiGsrXro9no_skD_EBt97RA&s" },
-  { id: 16, name: "Nicolas Caron", img: "https://yt3.googleusercontent.com/tOnhQ96FkL-m2EKB2GOgOgBK_GF-t-_3VXVmxuA1GHrGl9cFxx3BGE2PM2XUQPkfa4VfTRWXHZA=s900-c-k-c0x00ffffff-no-rj" },
+  { id: 16, name: "Nicolas Caron", img: "https://c8.alamy.com/comp/2H4C11E/nicolas-munoz-of-boy-pablo-during-the-outside-lands-music-festival-on-october-31-2021-in-san-francisco-california-photo-by-daniel-desloversipa-usa-2H4C11E.jpg" },
   { id: 17, name: "Camille Dubois", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdmFkjDjYdXgkPWFZiuceKDPyAO0m-XUCq7w&s" },
   { id: 18, name: "Alexandre Morel", img: "https://www.musicbusinessworldwide.com/files/2023/06/fJ8wJXTwPtpd442OhwgHrdxup0iiRQOMnZfPCt39gM-Z-dnbhJmTs-6kvN3aGFvvclUFSRHzi1cyE_KimVtKlqx5v1NKVi87NRFkAl910ZdyGR6ZuFbCAPyGc_SLbxhh50NEjkZl4ScFjjIOww5qagw-e1686751680260.jpeg" },
   { id: 19, name: "Manon Lefebvre", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyEzZ7eqadiS6TWKPncwDa8KJfAl2xR4O4Xg&s" },
@@ -39,7 +39,7 @@ const musicians = [
 export default function Musicians() {
   return (
     <div style={{ textAlign: "center", padding: "40px" }}>
-      <h1>🎤 Meet Our Musicians</h1>
+      <h1>🎤 Découvrez nos musiciens</h1>
       <div style={{ display: "flex", justifyContent: "center", gap: "30px", flexWrap: "wrap" }}>
         {musicians.map((musician) => (
           <Link key={musician.id} to={`/musicians/${musician.id}`} style={{ textDecoration: "none" }}>
