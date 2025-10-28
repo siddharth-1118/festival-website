@@ -27,15 +27,15 @@ export default function App() {
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/lineup" element={<Lineup />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/tickets" element={<Tickets />} />
-          <Route path="/musicians" element={<Musicians />} />
-          <Route path="/musicians/:id" element={<MusicianDetail />} />
-          <Route path="/cities" element={<Cities />} />
-          <Route path="/cities/:id" element={<CityDetails />} />
+          <Route path="/" element={<home />} />
+          <Route path="/about" element={<about />} />
+          <Route path="/lineup" element={<lineup />} />
+          <Route path="/contact" element={<contact />} />
+          <Route path="/tickets" element={<tickets />} />
+          <Route path="/musicians" element={<musicians />} />
+          <Route path="/musicians/:id" element={<musicianDetail />} />
+          <Route path="/cities" element={<cities />} />
+          <Route path="/cities/:id" element={<citiesDetails />} />
         </Routes>
         <footer className="text-center py-6 bg-black/40 mt-10"></footer>
       </div>
