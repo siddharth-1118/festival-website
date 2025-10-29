@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./citeies.css";
 
+
 const citiesData = [
   { id: "paris", name: "Paris", image: "https://i.ytimg.com/vi/jIbcr3UBBt8/maxresdefault.jpg" },
   { id: "lyon", name: "Lyon", image: "https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/9cb8efd6-10a0-11f0-9924-cac999f17aa5.png" },

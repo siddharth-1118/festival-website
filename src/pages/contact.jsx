@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submissions, setSubmissions] = useState([]);

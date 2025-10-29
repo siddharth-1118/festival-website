@@ -2,12 +2,12 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 
+
 const cityFestivals = {
   paris: {
     name: "Festival d'été de la musique à Paris",
     date: "21 juillet",
     musicians: ["Jean Dupont", "Léa Rousseau", "DJ Lumière"],
-    img: "https://i.ytimg.com/vi/jIbcr3UBBt8/maxresdefault.jpg"
   },
   lyon: {
     name: "Nuits de Jazz à Lyon",
@@ -170,7 +170,7 @@ export default function CityDetails() {
   }
 
   return (
-    <div style={{ textAlign: "center", color: "black", padding: "50px", backgroundImage: `url(https://user-gen-media-assets.s3.amazonaws.com/seedream_images/d77b7eb3-b1e7-42cd-95ff-2cbd9db67950.png)`, backgroundSize: "cover", minHeight: "100vh" }}>
+    <div style={{ textAlign: "center", color: "black", padding: "50px", borderRadius: "15px", maxWidth: "600px", margin: "40px auto" }}>
       <h2>🎵 {city.name}</h2>
       <p>Date : {city.date}</p>
       <h3>Musiciens à l'affiche :</h3>

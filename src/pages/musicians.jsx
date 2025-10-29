@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const musicians = [
   { id: 1, name: "Jean Dupont", img: "https://www.rollingstone.com/wp-content/uploads/2021/02/DSF5585-1.jpg", bio: "A versatile musician known for his soulful voice." },
   { id: 2, name: "Marie Leclerc", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbwOAs3YDJ2D-ezommE2yHTAGuKHmWSKUKXw&s", bio: "An accomplished pianist with a passion for classical music." },
@@ -82,6 +83,8 @@ export default function Musicians() {
               <img
                 src={musician.img}
                 alt={musician.name}
+                genre={musician.genre}
+
                 style={{
                   width: "150px",
                   height: "150px",
@@ -92,6 +95,8 @@ export default function Musicians() {
                 }}
               />
               <h3>{musician.name}</h3>
+              <p style={{ fontSize: "0.9rem", color: "#FFD700" }}>{musician.genre}</p>
+              
               <p style={{ fontSize: "0.9rem" }}>{musician.bio}</p>
               <p style={{ color: "#FFD700", textDecoration: "underline" }}>
                 View Details →

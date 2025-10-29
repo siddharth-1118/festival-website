@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
+const musicUrl = "https://www.bensound.com/bensound-music/bensound-creativeminds.mp3";
 export default function Tickets() {
   const formRef = useRef();
   const [status, setStatus] = useState("");

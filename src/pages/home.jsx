@@ -111,7 +111,7 @@ export default function Home() {
         >
           <h1 style={{
             fontSize: "3.7rem", color: "#FFD700",
-            marginBottom: "18px", fontWeight: "bold", letterSpacing: "2px", marginTop: "1000px"
+            marginBottom: "18px", fontWeight: "bold", letterSpacing: "2px", marginTop: "900px"
           }}>
             Festival de Musique Française 2025
           </h1>
