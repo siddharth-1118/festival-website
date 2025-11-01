@@ -1,10 +1,12 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "./musicians.jsx";
-import About from "./about.jsx";
+import { musicians } from "../data/musiciansdata";
+import "./about.jsx";
+// About.jsx
+const musicUrl = "https://www.bensound.com/bensound-music/bensound-tomorrow.mp3";
 
-const musicUrl = "https://www.bensound.com/bensound-music/bensound-creativeminds.mp3";
-// musicians.js
+// Musicians array (all 33 entries)
 const musicians = [
   {
     id: 1,
@@ -200,7 +202,7 @@ const musicians = [
     bio: "An avant-garde composer and sound artist.",
     genre: "Electronic, Avant-garde",
     achievements: ["Festival Sonore featured composer", "Film scores"],
-    instruments: ["Synth", "Electronics"],  
+    instruments: ["Synth", "Electronics"],  
     clip: "https://www.bensound.com/bensound-music/bensound-epic.mp3",
     about: "Alexandre Morel is an avant-garde composer and sound artist known for his innovative approach to music. His work often blurs the lines between genres, incorporating elements of electronic and acoustic soundscapes. With a focus on experimentation and collaboration, Alexandre has made a name for himself in the contemporary music scene."
   },
@@ -371,13 +373,13 @@ const musicians = [
   }
 ];
 
-
 export default function MusicianDetails() {
   const { id } = useParams();
   const musician = musicians.find((m) => m.id === parseInt(id));
 
   if (!musician) {
-    return (<div style={{
+    return (
+      <div style={{
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
@@ -397,7 +399,7 @@ export default function MusicianDetails() {
           Musicien introuvable
         </h2>
       </div>
-      );
+    );
   }
 
   return (
@@ -414,7 +416,6 @@ export default function MusicianDetails() {
         overflow: "hidden",
       }}
     >
-
       {/* Floating music notes as background decoration */}
       <div style={{
         position: "absolute",
@@ -454,7 +455,6 @@ export default function MusicianDetails() {
           border: "1px solid rgba(255,255,255,0.22)",
         }}
       >
-
         <img
           src={musician.img}
           alt={musician.name}
@@ -470,7 +470,6 @@ export default function MusicianDetails() {
             transition: "transform 0.5s cubic-bezier(.45,1.36,.46,1)",
           }}
         />
-
         <h1 style={{
           fontSize: "2.7rem",
           color: "#FFD700",
@@ -481,7 +480,6 @@ export default function MusicianDetails() {
         }}>
           {musician.name}
         </h1>
-
         <p style={{
           fontSize: "1.18rem",
           margin: "20px auto 20px auto",
@@ -494,7 +492,6 @@ export default function MusicianDetails() {
         }}>
           {musician.bio}
         </p>
-
         <h3 style={{
           fontSize: "1.3rem",
           color: "#43C6AC",
@@ -511,7 +508,6 @@ export default function MusicianDetails() {
         }}>
           Instruments : <span style={{ color: "#FFD700" }}>{musician.instruments.join(", ")}</span>
         </h3>
-
         {musician.achievements && musician.achievements.length > 0 && (
           <div style={{
             background: "rgba(255,215,0,0.12)",
@@ -536,9 +532,9 @@ export default function MusicianDetails() {
               color: "#43C6AC",
               fontWeight: 500
             }}>
-              {musician.achievements.map((achievement, index) => (
+              {musician.achievements.map((achievement, idx) => (
                 <li
-                  key={index}
+                  key={idx}
                   style={{
                     background: "rgba(67,198,172,0.10)",
                     borderRadius: "10px",
@@ -551,8 +547,6 @@ export default function MusicianDetails() {
             </ul>
           </div>
         )}
-
-        {/* Audio player with music clip preview */}
         <div style={{
           margin: "28px 0 0 0",
           textAlign: "center"
@@ -571,7 +565,6 @@ export default function MusicianDetails() {
             Your browser does not support the audio element.
           </audio>
         </div>
-
         {musician.about && (
           <div
             style={{
@@ -601,7 +594,6 @@ export default function MusicianDetails() {
             }}>{musician.about}</p>
           </div>
         )}
-
         <Link
           to="/musicians"
           style={{
