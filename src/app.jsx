@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {SpeedInsights} from "@versel/speed-insights/react";
 
 import Home from "./pages/home";
 import About from "./pages/about";
