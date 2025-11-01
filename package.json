@@ -2,7 +2,7 @@
   "name": "festival-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://siddharth-1118.github.io/festival-website",
+  "homepage": "https://festival-website-git-gh-pages-siddharth-1118s-projects.vercel.app/",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
