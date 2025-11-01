@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "./musicians.jsx";
-import { musicians } from "../data/musiciansdata";
 import "./about.jsx";
 // About.jsx
 const musicUrl = "https://www.bensound.com/bensound-music/bensound-tomorrow.mp3";
