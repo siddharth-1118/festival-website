@@ -5,6 +5,9 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submissions, setSubmissions] = useState([]);
   const [submitted, setSubmitted] = useState(false);
+  // About.jsx
+const musicUrl = "https://www.bensound.com/bensound-music/bensound-tomorrow.mp3";
+
 
   function handleChange(e) {
     const { name, value } = e.target;

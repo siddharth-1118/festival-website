@@ -97,14 +97,12 @@ export default function App() {
           gap: "20px"
         }}
       >
-        <NavButton to="/">Home</NavButton>
-        <NavButton to="/about">About</NavButton>
-        <NavButton to="/cities">Cities</NavButton>
-        <NavButton to="/musicians">Musicians</NavButton>
-        <NavButton to="/tickets">Tickets</NavButton>
-        <NavButton to="/lineup">Lineup</NavButton>
-        <NavButton to="/contact">Contact</NavButton>
-        <NavButton to="/layout">Layout</NavButton>
+        <NavButton to="/">homme</NavButton>
+        <NavButton to="/about">à propos</NavButton>
+        <NavButton to="/cities">villes</NavButton>
+        <NavButton to="/musicians">musiciens</NavButton>
+        <NavButton to="/tickets">billets</NavButton>
+        <NavButton to="/contact">contact</NavButton>
       </nav>
       {/* Padding so content isn't hidden under navbar */}
       <div style={{ paddingTop: "90px" }}>

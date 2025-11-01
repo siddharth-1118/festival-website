@@ -36,6 +36,9 @@ const citiesData = [
   { id: "rouen", name: "Rouen", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqGskGnVK5ORtKeGVRHiG1LY1r-DjbNiMsrw&s" },
   { id: "arles", name: "Arles", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShhbJiwIR8NnH4QeNeyryhY2xyAXoadGQPpA&s" }
 ];
+// About.jsx
+const musicUrl = "https://www.bensound.com/bensound-music/bensound-tomorrow.mp3";
+
 
 export default function Cities() {
   return (
@@ -64,6 +67,7 @@ export default function Cities() {
               style={{ width: "100%", height: "150px", objectFit: "cover" }}
             />
             <h3>{city.name}</h3>
+           
             <Link to={`/cities/${city.id}`}>
               <button style={{ marginBottom: "10px" }}>Voir le festival</button>
             </Link>

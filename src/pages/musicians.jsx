@@ -37,6 +37,9 @@ const musicians = [
   { id: 32, name: "Gabriel Moreau", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZluG7urB_ZGXhTI_WrQy7rq0m97oz9VIcmA&s", bio: "A skilled drummer known for his dynamic style." },
   { id: 33, name: "Anaïs Lefevre", img: "https://i1.sndcdn.com/avatars-000603459381-l1cnms-t240x240.jpg", bio: "A talented violinist with a passion for classical and contemporary music." }  
 ];
+// About.jsx
+const musicUrl = "https://www.bensound.com/bensound-music/bensound-tomorrow.mp3";
+
 
 export default function Musicians() {
   return (
