@@ -94,7 +94,7 @@ export default function Tickets() {
           <option value="paypal">PayPal</option>
           <option value="bank_transfer">Virement bancaire</option>
         </select><br /><br />
-        <button type="submit">Envoyer</button>
+        <button type="submit" className="btn submit-btn shimmer">Envoyer</button>
       </form>
 
       {status === "sending" && <p>Votre demande est en cours d'envoi...</p>}

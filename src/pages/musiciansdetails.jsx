@@ -385,6 +385,11 @@ export default function MusicianDetails() {
         justifyContent: "center",
         background: "linear-gradient(120deg, #28243C 0%, #43C6AC 80%)",
       }}>
+        <span className="note" style={{ left: "8%", top: "10%" }}>🎵</span>
+        <span className="note" style={{ right: "12%", top: "21%" }}>🎶</span>
+        <span className="note" style={{ left: "3%", bottom: "19%" }}>🎷</span>
+        <span className="note" style={{ right: "6%", bottom: "18%" }}>🎸</span>
+
         <h2 style={{
           color: "#FFD700",
           textAlign: "center",

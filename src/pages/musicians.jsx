@@ -1,5 +1,9 @@
-import React from "react";
+import React, { use, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 
 
 const musicians = [
@@ -40,69 +44,71 @@ const musicians = [
 // About.jsx
 const musicUrl = "https://www.bensound.com/bensound-music/bensound-tomorrow.mp3";
 
+const notes = [
+    { style: { left: '8%', top: '10%' }, symbol: '🎵' },
+    { style: { right: '12%', top: '21%' }, symbol: '🎶' },
+    { style: { left: '3%', bottom: '19%' }, symbol: '🎷' },
+    { style: { right: '6%', bottom: '18%' }, symbol: '🎸' }
+  ];
 
 export default function Musicians() {
-  return (
-    <div style={{ textAlign: "center", padding: "40px", color: "white" }}>
-      <h1>🎤 Meet Our Musicians</h1>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "30px",
-          flexWrap: "wrap",
-          marginTop: "30px",
-        }}
-      >
-        {musicians.map((musician) => (
+   return (
+    <div style={{ position: 'relative', minHeight: '100vh', background: 'none' }}>
+      {/* Floating Emoji Notes */}
+      {notes.map((note, i) => (
+        <span key={i} className="note" style={note.style}>{note.symbol}</span>
+      ))}
+      <h1 className="shimmer" style={{ textAlign: "center", margin: "48px 0 22px" }}>
+        Meet Our Musicians
+      </h1>
+      <div className="grid" style={{ maxWidth: '1280px', margin: '0 auto', padding: '2.5rem 0'}}>
+        {musicians.map(musician => (
           <Link
             key={musician.id}
             to={`/musicians/${musician.id}`}
-            style={{
-              textDecoration: "none",
-              color: "white",
-              textAlign: "center",
-              transition: "transform 0.3s ease",
-            }}
+            style={{ textDecoration: "none" }}
+            data-aos="zoom-in-up"
           >
-            <div
-              style={{
-                width: "200px",
-                padding: "20px",
-                borderRadius: "15px",
-                background: "rgba(255,255,255,0.1)",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
-                transition: "transform 0.3s ease, background 0.3s ease",
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = "scale(1.05)";
-                e.currentTarget.style.background = "rgba(255,215,0,0.3)";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = "scale(1)";
-                e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-              }}
-            >
+            <div className="card" style={{
+              textAlign: "center",
+              padding: "2.1rem 1rem 1.5rem",
+              minHeight: "360px",
+              position: "relative"
+            }}>
               <img
                 src={musician.img}
                 alt={musician.name}
-                genre={musician.genre}
-
                 style={{
-                  width: "150px",
-                  height: "150px",
+                  width: "140px",
+                  height: "140px",
                   borderRadius: "50%",
                   objectFit: "cover",
                   marginBottom: "12px",
                   border: "4px solid #FFD700",
+                  boxShadow: "0 2px 20px #ff5f7e80"
                 }}
+                data-aos="fade-up"
+                data-aos-delay="130"
               />
-              <h3>{musician.name}</h3>
-              <p style={{ fontSize: "0.9rem", color: "#FFD700" }}>{musician.genre}</p>
-              
-              <p style={{ fontSize: "0.9rem" }}>{musician.bio}</p>
-              <p style={{ color: "#FFD700", textDecoration: "underline" }}>
-                View Details →
+              <h3 className="shimmer" style={{ margin: "6px 0 2px", fontWeight: "bold", fontSize: "1.3rem" }}>
+                {musician.name}
+              </h3>
+              <p style={{ fontSize: "0.9rem", color: "#FFD700", fontWeight: "500", marginBottom: "5px" }}>
+                {musician.genre}
+              </p>
+              <p style={{ fontSize: "0.95rem", opacity: 0.84 }}>{musician.bio}</p>
+              <p
+                className="btn shimmer"
+                style={{
+                  marginTop: "10px",
+                  fontSize: "0.9rem",
+                  cursor: "pointer",
+                  display: "inline-block"
+                }}
+                data-aos="fade"
+                data-aos-delay="170"
+              >
+                View Details
               </p>
             </div>
           </Link>

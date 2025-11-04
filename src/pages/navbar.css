@@ -1,42 +1,71 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  color: white;
-  padding: 15px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  background: rgba(31,38,135,0.10);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 22px 0 rgba(31, 38, 135, 0.09);
+  padding: 0.9rem 2.5rem;
+  border-radius: 0 0 22px 22px;
 }
 
-.logo {
-  font-size: 22px;
+.navbar .logo {
+  font-size: 2rem;
   font-weight: bold;
-  color: #ffcc00;
+  background: linear-gradient(90deg, #ff5f7e, #FFD700 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: .03em;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
+  align-items: center;
 }
 
-.nav-link {
-  color: white;
+/* Rest matches the nav a rules above */
+.nav-links a {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0.8em;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s ease;
-  padding-bottom: 4px;
+  font-size: 1.09rem;
+  transition: color 0.27s;
 }
-
-/* Hover effect */
-.nav-link:hover {
-  color: #ffcc00;
+.nav-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #FFD700, #43C6AC);
+  border-radius: 8px;
+  transition: width 0.38s cubic-bezier(.68,-0.55,.27,1.55);
+  margin-top: 4px;
 }
-
-/* ✅ Highlight the active page */
-.nav-link.active {
-  color: #ffcc00;
-  border-bottom: 2px solid #ffcc00;
+.nav-links a:hover::after, .nav-links a.active::after {
+  width: 100%;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: #FFD700;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links on small screens */
+  }
+}
+/* End of navbar.css */
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0,0,0,0.37);
+  color: #fff;
+  margin-top: 3rem;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -1px 22px 0 rgba(31, 38, 135, 0.09);
+  backdrop-filter: blur(7px); 
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.5s 0.5s;
 }

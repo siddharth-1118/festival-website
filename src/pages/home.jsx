@@ -105,7 +105,7 @@ export default function Home() {
             padding: "58px 0 18px 0",
           }}
         >
-          <h1 style={{
+          <h1 className="shimmer" style={{
             fontSize: "3.7rem", color: "#FFD700",
             marginBottom: "18px", fontWeight: "bold", letterSpacing: "2px", marginTop: "900px"
           }}>
