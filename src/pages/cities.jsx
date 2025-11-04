@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./citeies.css";
+import Confetti from "react-confetti";
 
 
 const citiesData = [
@@ -74,6 +75,7 @@ export default function Cities() {
           </div>
         ))}
       </div>
+      <Confetti width={window.innerWidth} height={window.innerHeight} colors={["#cf3487", "#ffff79"]} />
     </div>
   );
 }

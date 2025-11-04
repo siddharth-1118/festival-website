@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Confetti from "react-confetti";
 const imgUrl = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1600&q=80";
 const musicUrl = "https://www.bensound.com/bensound-music/bensound-creativeminds.mp3";
 
@@ -107,7 +107,7 @@ export default function Home() {
         >
           <h1 className="shimmer" style={{
             fontSize: "3.7rem", color: "#FFD700",
-            marginBottom: "18px", fontWeight: "bold", letterSpacing: "2px", marginTop: "900px"
+            marginBottom: "18px", fontWeight: "bold", letterSpacing: "2px", marginTop: "1500px"
           }}>
             Festival de Musique Française 2025
           </h1>
@@ -262,6 +262,7 @@ export default function Home() {
           © 2025 Festival de Musique Française | Tous droits réservés
         </footer>
       </main>
+      <Confetti width={window.innerWidth} height={window.innerHeight} colors={["#cf3487", "#ffff79"]} />
     </div>
   );
 }

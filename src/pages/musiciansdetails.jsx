@@ -120,7 +120,7 @@ const musicians = [
   {
     id: 11,
     name: "Chloé Mercier",
-    img: "https://media.licdn.com/dms/image/v2/D4E03AQF_27-aBpSRNw/profile-displayphoto-shrink_200_200/B4EZT6DKTIHUAY-/0/1739361921198?e=2147483647&v=beta&t=iY8YqE8lNF_VyxmluqnV9HXpd9lLExsSQ4AL_nZ7p_o",
+    img: "https://croquesesamecompagnie.net/wp-content/uploads/2023/12/chloe-mercier-2018.jpg?w=640",
     bio: "A folk singer-songwriter with heartfelt lyrics.",
     genre: "Folk",
     achievements: ["Festival du Chant award", "Album: 'Les Racines'"],

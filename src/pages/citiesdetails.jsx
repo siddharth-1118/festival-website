@@ -3,6 +3,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "./cities.jsx";
 import "./about.jsx";
+import Confetti from "react-confetti";
 
 const cityFestivals = {
   paris: {
@@ -462,6 +463,7 @@ export default function CityDetails() {
           </button>
         </Link>
       </div>
+      <Confetti width={window.innerWidth} height={window.innerHeight} colors={["#cf3487", "#ffff79"]} />
     </div>
   );
 }
