@@ -6,10 +6,6 @@ const musicUrl = "https://www.bensound.com/bensound-music/bensound-creativeminds
 
 const highlights = [
   {
-    src: "https://images.unsplash.com/photo-1464983953574-0892a716854b?fit=crop&w=600&q=80",
-    caption: "Illumination du ciel de Paris",
-  },
-  {
     src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?fit=crop&w=600&q=80",
     caption: "La foule de Lyon en fête",
   },
