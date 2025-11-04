@@ -96,6 +96,7 @@ export default function Tickets() {
         </select><br /><br />
         <button type="submit" className="btn submit-btn shimmer">Envoyer</button>
       </form>
+      <Confetti width={window.innerWidth} height={window.innerHeight} colors={["#cf3487", "#ffff79"]} />
 
       {status === "sending" && <p>Votre demande est en cours d'envoi...</p>}
       {status === "success" && <p>✅ Votre demande de billet a été envoyée ! Vérifiez votre e-mail pour la confirmation.</p>}
