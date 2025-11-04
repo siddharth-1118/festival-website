@@ -1,6 +1,8 @@
 // src/pages/Tickets.jsx
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import Confetti from "react-confetti";
+
 
 const musicUrl = "https://www.bensound.com/bensound-music/bensound-creativeminds.mp3";
 export default function Tickets() {
